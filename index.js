@@ -32,7 +32,7 @@ const session = require('express-session');
 const contact = require('./routes/contact');
 const admin = require('./routes/admin');
 const view = require('./routes/view');
-
+app.set('trust proxy', 1);
 app.use(session({
     secret: process.env.SECRET,
     resave: false,

@@ -43,7 +43,7 @@ app.use(session({
     }),
     cookie: {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 1 giờ
-        httpOnly: truetrue,
+        httpOnly: true,
         secure: true
     },
 }));

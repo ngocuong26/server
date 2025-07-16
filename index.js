@@ -22,7 +22,7 @@ const cart = require('./routes/cart');
 const comments = require('./routes/comments');
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://192.168.1.13:3000', 'https://vpp-dvof.onrender.com', 'https://myshop-vpp.onrender.com'],
+    origin: 'https://myshop-vpp.onrender.com',
     credentials: true
 }));
 app.use(express.json());

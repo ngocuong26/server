@@ -65,6 +65,10 @@ app.get('/', (req, res) => {
     res.json({message: "Thanh cong!!!"});
 })
 
+app.get('/healthz', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.post('/', (req, res) => {
     res.json({message: "Thanh cong!!!"});
 })

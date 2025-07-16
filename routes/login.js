@@ -7,6 +7,8 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', async (req, res) => {
+    console.log("Login route được gọi"); 
+    console.log("Body nhận được:", req.body);
     const { username, password } = req.body;
     console.log(username)
     try {

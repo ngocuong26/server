@@ -4,6 +4,10 @@ const Products = require("../modules/products");
 
 class OrdersController{
     async orderCreate(req, res) {
+        console.log('📦 Đang xử lý đặt hàng...');
+        console.log('➡️ Session hiện tại:', req.session);
+        console.log('➡️ Thông tin user:', req.session.user);
+        console.log('➡️ Dữ liệu body:', req.body);
         const id_user = req.session.user.id;
         let {products, quantity, total, address, name, phone, date} = req.body;
         const cart = await Cart.findOne({id_user : id_user});

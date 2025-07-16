@@ -37,10 +37,10 @@ app.use(session({
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
-    // store: MongoStore.create({
-    //     mongoUrl: process.env.MONGODB_URL,
-    //     ttl: 7 * 24 * 60 * 60 // giữ 7 ngày
-    // }),
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGODB_URL,
+        ttl: 7 * 24 * 60 * 60 // giữ 7 ngày
+    }),
     cookie: {
         maxAge: 7 * 24 * 60 * 60 * 1000, // 1 giờ
         httpOnly: true

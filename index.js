@@ -22,7 +22,7 @@ const cart = require('./routes/cart');
 const comments = require('./routes/comments');
 
 app.use(cors({
-    origin: 'https://myshop-vpp.onrender.com',
+    origin: 'https://myshop-vpp.vercel.app',
     credentials: true
 }));
 app.use(express.json());
